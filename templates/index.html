@@ -4,9 +4,7 @@
 <head>
     
     <body> 
-        <p class="aligncenter">
-        <div style= "background-image: url('https://i.pinimg.com/originals/72/f1/c5/72f1c560f78fb0c206fd717b36e215c7.jpg');"
-        </p>
+        
         </body> 
        
     <meta charset="UTF-8">
@@ -15,6 +13,15 @@
 </head>
 
 <body>
+    <header>
+        <h1>Car Price Predictor</h1>
+        <img
+          src="https://s.yimg.com/uu/api/res/1.2/ISzZ0mYejsT9yTDrsYUaLQ--~B/aD0xOTI0O3c9Mjg4NjtzbT0xO2FwcGlkPXl0YWNoeW9u/http://media.zenfs.com/en_US/News/US-AFPRelax/audi_e_tron_gt_.e2943092624.original.jpg"
+          alt="Car"
+          width="150"
+          height="100"
+        />
+      </header
 
     <div style="color:blue">
         <form action="{{ url_for('predict')}}" method="post">
@@ -53,114 +60,123 @@
 
 
 
+
+
+
+    
     <style>
         body {
-            background-color: lightslategray;
+          background-color: #f2f2f2;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+  
+        header {
+          background-color: #563d7c;
+          color: #fff;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+        }
+  
+        h1 {
+          font-size: 28px;
+          margin: 0;
+        }
+  
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+  
+        form {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 40px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+  
+        input,
+        select {
+          padding: 10px;
+          margin-bottom: 20px;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+          color: #333;
+        }
+  
+        button {
+          padding: 10px 20px;
+          border-radius: 5px;
+          border: none;
+          font-size: 18px;
+          color: #fff;
+          background-color: #563d7c;
+          cursor: pointer;
+        }
+  
+        button:hover {
+          background-color: #462f5e;
+        }
+  
+        .result {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          margin-top: 40px;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+          text-align: center;
+        }
+  
+        .result h2 {
+          margin: 0;
+          font-size: 24px;
+        }
+  
+        .result p {
+          font-size: 20px;
+          margin: 20px 0 0;
+        }
+  
+        /* Responsive styles */
+        @media (max-width: 768px) {
+          header {
+            flex-direction: column;
             text-align: center;
-            padding: 0px;
+          }
+  
+          h1 {
+            margin-top: 20px;
+          }
+  
+          .container {
+            padding: 10px;
+          }
+  
+          form {
+            padding: 20px;
+          }
         }
+      </style>
         
-        #research {
-            font-size: 18px;
-            width: 100px;
-            height: 23px;
-            top: 23px;
-        }
-        
-        #box {
-            border-radius: 60px;
-            border-color: 45px;
-            border-style: solid;
-            font-family: cursive;
-            text-align: center;
-            background-color: rgb(168, 131, 61);
-            font-size: medium;
-            position: absolute;
-            width: 700px;
-            bottom: 9%;
-            height: 850px;
-            right: 30%;
-            padding: 0px;
-            margin: 0px;
-            font-size: 14px;
-        }
-        
-        #fuel {
-            width: 83px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 20px;
-        }
-        
-        #fuel:hover {
-            background-color: coral;
-        }
-        
-        #research {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #research:hover {
-            background-color: coral;
-        }
-        
-        #resea {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #resea:hover {
-            background-color: coral;
-        }
-        
-        #sub {
-            width: 120px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #sub:hover {
-            background-color: darkcyan;
-        }
-        
-        #first {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #second {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #third {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #fourth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-    </style>
-</body>
 
 </html>
